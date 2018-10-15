@@ -1,8 +1,6 @@
-package pkg
-
-
-
 //+build wireinject
+
+package pkg
 
 
 // InitializeEvent creates an Event. It will error if the Event is staffed with
