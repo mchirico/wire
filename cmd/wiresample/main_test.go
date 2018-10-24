@@ -8,18 +8,18 @@ import (
 	"time"
 )
 
-
 func RunLoop() (pkg.Event, error) {
+
 	e, err := pkg.InitializeEvent("hi there!")
 	if err != nil {
-		for i := 0; i < 300; i++ {
+		for i := 0; i < 7; i++ {
 			e, err := pkg.InitializeEvent("hi there!")
 			if err != nil {
-				fmt.Printf("here ..")
+				fmt.Printf("time: %v..", time.Now().Unix()%2)
 				time.Sleep(500 * time.Millisecond)
 				continue
 			}
-			fmt.Printf("\n\n SUCCESS!")
+			fmt.Printf("\n\n SUCCESS!\n")
 			return e, err
 		}
 	}
